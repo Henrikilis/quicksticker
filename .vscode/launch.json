@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: Dev (npm run dev)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [ "run", "dev" ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "serverReadyAction": {
+        "pattern": "http://localhost:([0-9]+)",
+        "action": "openExternally",
+        "uriFormat": "http://localhost:%s"
+      }
+    },
+    {
+      "name": "Launch Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug and Open in Browser",
+      "configurations": [
+        "Next.js: Dev (npm run dev)",
+        "Launch Chrome"
+      ]
+    }
+  ]
+}
